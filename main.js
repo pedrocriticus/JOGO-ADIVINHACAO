@@ -1,4 +1,6 @@
 // variáveis botões html
+
+
 const screen1 = document.querySelector('.screen1');
 const screen2 = document.querySelector('.screen2');
 
@@ -28,7 +30,7 @@ function handleTryClick(event) {
     if (Number(inputNumber.value) == randomNumber) {
        toggleScreen();
        screen2.querySelector("h2").innerText = `Acertou em ${xAttempts} tentativas!`; 
-}   controllerInputNumber();
+}
     inputNumberValue();
     inputNumber.value = "";
     xAttempts++;
@@ -45,29 +47,12 @@ function toggleScreen() {
     screen2.classList.toggle("hide");
 }
 
+
+
+
 function inputNumberValue(number = '') {
     if (inputNumber.value === number) {
         xAttempts--
         alert('Digite um número')
     }
 }
-
-// function controllerInputNumber(number1) {
-//     let number0 = 0 ;
-//     let number10 = 10;
-//     number1 = 
-
-//     if (Number(inputNumber.value) != number1)  {
-//         xAttempts--
-//         alert('Digite um número entre 0 e 10')
-//    }
-    
-// }
-/*
-Desafio qual é o evento de ENTER?
-
--fazer um limite entre 0 e 10
-
--precisa ter número dentro do input para dar enter
-
-*/ 
