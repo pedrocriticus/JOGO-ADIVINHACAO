@@ -18,7 +18,12 @@
         <h1>Jogo da Adivinhação</h1>
         <p>Adivinhe um número entre 0 e 10</p>
         <form>
-            <input id="inputNumber" type="tel" />
+            <input
+            id="inputNumber"
+            type="number"
+            min="0"
+            max="10"
+            />
           <button id="btnTry">Tentar</button>
         </form>
         <p class="dica">*o resultado está por debaixo dos panos

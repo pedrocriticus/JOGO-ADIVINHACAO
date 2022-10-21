@@ -27,9 +27,18 @@ btnReset.addEventListener('click', handleResetClick);
 //funções CallBack
 function handleTryClick(event) {
     event.preventDefault();// Não faça o padrão
+
+
     if (Number(inputNumber.value) == randomNumber) {
-       toggleScreen();
-       screen2.querySelector("h2").innerText = `Acertou em ${xAttempts} tentativas!`; 
+        if(xAttempts == 1) {
+        toggleScreen();
+       screen2.querySelector("h2").innerText = `O número era o ${randomNumber},
+       e você acertou em ${xAttempts} tentativa!`;
+    } else {
+        toggleScreen();
+        screen2.querySelector("h2").innerText = `O número era o ${randomNumber},
+        e você acertou em ${xAttempts} tentativas!`;
+    }
 }
     inputNumberValue();
     inputNumber.value = "";
@@ -46,9 +55,6 @@ function toggleScreen() {
     screen1.classList.toggle("hide") ;
     screen2.classList.toggle("hide");
 }
-
-
-
 
 function inputNumberValue(number = '') {
     if (inputNumber.value === number) {
